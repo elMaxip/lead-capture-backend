@@ -1,0 +1,124 @@
+{
+  "prospectos": [
+    {
+      "id": "3f8a2c1e-5b7d-4e9a-8c6f-1a2b3c4d5e6f",
+      "nombre": "Camila Rojas",
+      "email": "camila.rojas@example.com",
+      "telefono": "+56912345678",
+      "nivelEducativo": "UNIVERSITARIA",
+      "cursoId": 3,
+      "modalidad": "ONLINE",
+      "canalContacto": "WHATSAPP",
+      "observaciones": "Interesada en horario vespertino",
+      "capturadoEn": "2026-10-19T14:32:00Z"
+    },
+    {
+      "id": "a1b2c3d4-0001-4a00-8000-000000000001",
+      "nombre": "Matías González",
+      "email": "matias.gonzalez@example.com",
+      "telefono": "+56923456789",
+      "nivelEducativo": "TECNICO_PROFESIONAL",
+      "cursoId": 5,
+      "modalidad": "PRESENCIAL",
+      "canalContacto": "TELEFONO",
+      "observaciones": "Trabaja en planta, prefiere sábados",
+      "capturadoEn": "2026-10-19T14:40:00Z"
+    },
+    {
+      "id": "a1b2c3d4-0002-4a00-8000-000000000002",
+      "nombre": "Valentina Muñoz",
+      "email": "valentina.munoz@example.com",
+      "telefono": "+56934567890",
+      "nivelEducativo": "MEDIA",
+      "cursoId": 1,
+      "modalidad": "ONLINE",
+      "canalContacto": "EMAIL",
+      "observaciones": null,
+      "capturadoEn": "2026-10-19T14:55:00Z"
+    },
+    {
+      "id": "a1b2c3d4-0003-4a00-8000-000000000003",
+      "nombre": "Benjamín Soto",
+      "email": "benjamin.soto@example.com",
+      "telefono": "+56945678901",
+      "nivelEducativo": "UNIVERSITARIA",
+      "cursoId": 9,
+      "modalidad": "ONLINE",
+      "canalContacto": "EMAIL",
+      "observaciones": "Consulta por financiamiento SENCE",
+      "capturadoEn": "2026-10-19T15:05:00Z"
+    },
+    {
+      "id": "a1b2c3d4-0004-4a00-8000-000000000004",
+      "nombre": "Fernanda Díaz",
+      "email": "fernanda.diaz@example.com",
+      "telefono": "+56956789012",
+      "nivelEducativo": "POSTGRADO",
+      "cursoId": 10,
+      "modalidad": "PRESENCIAL",
+      "canalContacto": "WHATSAPP",
+      "observaciones": "Jefa de área, interés para su equipo",
+      "capturadoEn": "2026-10-19T15:12:00Z"
+    },
+    {
+      "id": "a1b2c3d4-0005-4a00-8000-000000000005",
+      "nombre": "Joaquín Pérez",
+      "email": "joaquin.perez@example.com",
+      "telefono": "+56967890123",
+      "nivelEducativo": "TECNICO_PROFESIONAL",
+      "cursoId": 7,
+      "modalidad": "PRESENCIAL",
+      "canalContacto": "TELEFONO",
+      "observaciones": null,
+      "capturadoEn": "2026-10-19T15:20:00Z"
+    },
+    {
+      "id": "a1b2c3d4-0006-4a00-8000-000000000006",
+      "nombre": "Isidora Fuentes",
+      "email": "isidora.fuentes@example.com",
+      "telefono": "+56978901234",
+      "nivelEducativo": "MEDIA",
+      "cursoId": 8,
+      "modalidad": "ONLINE",
+      "canalContacto": "WHATSAPP",
+      "observaciones": "Quiere certificado al terminar",
+      "capturadoEn": "2026-10-19T15:31:00Z"
+    },
+    {
+      "id": "a1b2c3d4-0007-4a00-8000-000000000007",
+      "nombre": "Tomás Contreras",
+      "email": "tomas.contreras@example.com",
+      "telefono": "+56989012345",
+      "nivelEducativo": "UNIVERSITARIA",
+      "cursoId": 2,
+      "modalidad": "ONLINE",
+      "canalContacto": "EMAIL",
+      "observaciones": null,
+      "capturadoEn": "2026-10-19T15:44:00Z"
+    },
+    {
+      "id": "a1b2c3d4-0008-4a00-8000-000000000008",
+      "nombre": "Antonia Silva",
+      "email": "antonia.silva@example.com",
+      "telefono": "+56990123456",
+      "nivelEducativo": "BASICA",
+      "cursoId": 4,
+      "modalidad": "PRESENCIAL",
+      "canalContacto": "TELEFONO",
+      "observaciones": "Llamar después de las 18:00",
+      "capturadoEn": "2026-10-19T16:02:00Z"
+    },
+    {
+      "id": "a1b2c3d4-0009-4a00-8000-000000000009",
+      "nombre": "Vicente Morales",
+      "email": "vicente.morales@example.com",
+      "telefono": "+56901234567",
+      "nivelEducativo": "TECNICO_PROFESIONAL",
+      "cursoId": 6,
+      "modalidad": "PRESENCIAL",
+      "canalContacto": "WHATSAPP",
+      "observaciones": null,
+      "capturadoEn": "2026-10-19T16:15:00Z"
+    }
+  ]
+}
