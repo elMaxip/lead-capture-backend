@@ -1,0 +1,36 @@
+services:
+  db:
+    image: postgres:17
+    container_name: lead-capture-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: captura
+      POSTGRES_PASSWORD: captura
+      POSTGRES_DB: captura
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U captura -d captura"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # API en contenedor (opcional): docker compose --profile api up -d --build
+  api:
+    build: .
+    container_name: lead-capture-api
+    restart: unless-stopped
+    profiles: ["api"]
+    environment:
+      DATABASE_URL: postgres://captura:captura@db:5432/captura?sslmode=disable
+      PORT: "8080"
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:
