@@ -1,0 +1,16 @@
+# Binarios
+/bin/
+*.exe
+/api
+
+# Entorno local
+.env
+
+# Editores / SO
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Cobertura de tests
+*.out
