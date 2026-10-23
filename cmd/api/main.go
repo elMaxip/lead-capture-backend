@@ -14,6 +14,7 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/joho/godotenv"
 
+	"github.com/therionlabs/lead-capture-backend/internal/auth"
 	"github.com/therionlabs/lead-capture-backend/internal/catalogo"
 	"github.com/therionlabs/lead-capture-backend/internal/config"
 	"github.com/therionlabs/lead-capture-backend/internal/db"
@@ -53,6 +54,8 @@ func run() error {
 	}
 	slog.Info("migraciones al día")
 
+	authRepo := auth.NewRepository(pool)
+	authHandler := auth.NewHandler(authRepo)
 	catalogoHandler := catalogo.NewHandler(catalogo.NewRepository(pool))
 	prospectoHandler := prospecto.NewHandler(prospecto.NewRepository(pool), prospecto.NewValidator())
 
@@ -61,10 +64,17 @@ func run() error {
 	r.Use(middleware.Logger) // registra método, ruta, estado y duración; nunca el cuerpo
 	r.Use(middleware.Recoverer)
 
+	soloCaptador := auth.RequireRol(authRepo, auth.RolCaptador)
+	soloAdministrativo := auth.RequireRol(authRepo, auth.RolAdministrativo)
+	cualquierRol := auth.RequireRol(authRepo, auth.RolCaptador, auth.RolAdministrativo)
+
 	r.Route("/api", func(r chi.Router) {
-		r.Get("/catalogo", catalogoHandler.Get)
-		r.Post("/prospectos/sync", prospectoHandler.Sync)
-		r.Get("/prospectos", prospectoHandler.List)
+		r.Post("/auth/login", authHandler.Login)
+		r.With(cualquierRol).Post("/auth/logout", authHandler.Logout)
+
+		r.With(cualquierRol).Get("/catalogo", catalogoHandler.Get)
+		r.With(soloCaptador).Post("/prospectos/sync", prospectoHandler.Sync)
+		r.With(soloAdministrativo).Get("/prospectos", prospectoHandler.List)
 	})
 
 	srv := &http.Server{

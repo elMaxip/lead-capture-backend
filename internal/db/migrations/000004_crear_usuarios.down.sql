@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS sesiones;
+DROP TABLE IF EXISTS usuarios;
