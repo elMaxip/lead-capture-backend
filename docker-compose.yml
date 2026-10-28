@@ -17,17 +17,15 @@ services:
       timeout: 3s
       retries: 10
 
-  # API en contenedor (opcional): docker compose --profile api up -d --build
   api:
     build: .
     container_name: lead-capture-api
     restart: unless-stopped
-    profiles: ["api"]
     environment:
       DATABASE_URL: postgres://captura:captura@db:5432/captura?sslmode=disable
-      PORT: "8080"
+      PORT: "8081"
     ports:
-      - "8080:8080"
+      - "8081:8081"
     depends_on:
       db:
         condition: service_healthy
